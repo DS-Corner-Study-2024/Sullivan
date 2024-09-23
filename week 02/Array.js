@@ -1,43 +1,55 @@
-//Parameters and Arguments//
-function sayThanks(name) {
-    console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
-  }
-  sayThanks(Cole);
-//Default Parameters//
-function makeShoppingList(item1='milk', item2='bread', item3='eggs'){
-    console.log(`Remember to buy ${item1}`);
-    console.log(`Remember to buy ${item2}`);
-    console.log(`Remember to buy ${item3}`);
-  }  
-//Return//
-function monitorCount01(rows, columns){return rows*columns;}
-const numOfMonitors=monitorCount01(5,4);
-console.log(numOfMonitors)
-//Helper Fuctions//
-function monitorCount02(rows, columns) {
-    return rows * columns;
-  }
-    function costOfMonitors(rows,columns){
-      return monitorCount02(rows, columns)*200;
-    }
-  const totalCost=costOfMonitors(5,4);
-  console.log(totalCost);
-//Function Expressions//
-const plantNeedsWater01=function (day){
-    if(day==='Wednesday'){
-      return true;
-    }else{return false;}
-  };
-const check=plantNeedsWater01('Tuesday');
-console.log(check);
+//Accessing Elements//
+const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
+let listItem=famousSayings[0];
+console.log(listItem);
+console.log(famousSayings[2]);
+console.log(famousSayings[3]);
 
-//Arrow Functions//
-const plantNeedsWater02 = (day) =>{
-    if (day === 'Wednesday') {
-      return true;
-    } else {
-      return false;
-    }
-  };
-//Concise Body Arrow Funcions//
-const plantNeedsWater03 = day => day === 'Wednesday' ? true : false;
+//Array with let and const//
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments[0]=('Mayo');
+console.log(condiments);
+
+condiments=['Mayo'];
+console.log(condiments);
+
+utensils[3]='Spoon';
+console.log(utensils);
+
+//The .length property//
+const objectives = ['Learn a new language', 'Read 52 books', 'Run a marathon'];
+console.log(objectives.length)
+
+//The .push() Method//
+const chores01 = ['wash dishes', 'do laundry', 'take out trash'];
+chores.push('item1', 'itme2');
+
+console.log(chores)
+
+//The .pop() Method//
+const chores02 = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
+
+chores.pop();
+console.log(chores);
+
+//More Array Methods
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift();
+console.log(groceryList);
+
+groceryList.unshift('popcorn');
+console.log(groceryList);
+
+console.log(groceryList.slice(1,4));
+console.log(groceryList);
+
+const pastaIndex=groceryList.indexOf('pasta');
+console.log(pastaIndex);
+
+//Nested Arrays
+let numberClusters=[[1,2],[3,4],[5,6]];
+const target=numberClusters[2][1];
